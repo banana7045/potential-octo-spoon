@@ -21,7 +21,7 @@ function preload() {
 function setup(){
     var canvas = createCanvas(1200,400);
     engine = Engine.create();
-    world = engine.world();
+    world = engine.world;
 
 
     ground = new Ground(600,height,1200,20);
@@ -56,7 +56,7 @@ function draw(){
         fill("white")
         text("Score  " + score, width-300, 50)
     
-    Engine.update();
+    Engine.update(engine);
     //strokeWeight(4);
     box1.display();
     box2.display();
